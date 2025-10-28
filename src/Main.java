@@ -1,10 +1,21 @@
 import java.util.Scanner;
 public class Main {
-
+    /**
+     * Función para imprimir el estado de los dos Pokémon
+     * @param pokemon1 - String con el nombre del primer Pokémon
+     * @param vidaChar - Puntos de vida del segundo Pokémon
+     * @param pokemon2 - String con el nombre del segundo Pokémon
+     * @param vidaBul - Puntos de vida del segundo Pokémon
+     */
     public static void estadoPokemon(String pokemon1, int vidaChar, String pokemon2, int vidaBul) {
         String paraImprimir = "\nContendientes: " + "\nNombre: " + pokemon1 +
                 "\nVida: " + vidaChar + "\nNombre: " + pokemon2 + "\nVida: " + vidaBul;
         System.out.println(paraImprimir);
+    }
+
+    public static void ataqueARealizar(String tipoAtaque) {
+        String ataqueImprimir = "\nQuieres que use el ataque normal o el especial? ";
+        System.out.println(ataqueImprimir);
     }
 
     public static void main(String[] args) {
