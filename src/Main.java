@@ -1,5 +1,12 @@
 import java.util.Scanner;
 public class Main {
+
+    public static void estadoPokemon(String pokemon1, int vidaChar, String pokemon2, int vidaBul) {
+        String paraImprimir = "\nContendientes: " + "\nNombre: " + pokemon1 +
+                "\nVida: " + vidaChar + "\nNombre: " + pokemon2 + "\nVida: " + vidaBul;
+        System.out.println(paraImprimir);
+    }
+
     public static void main(String[] args) {
         // Datos Pokémon 1
         String pokemon1 = "Charmander";
@@ -27,9 +34,7 @@ public class Main {
         boolean turnoPokemon = true;
 
         while (vidaChar > 0 && vidaBul > 0) {
-            System.out.println("\nContendientes: ");
-            System.out.println("Nombre: " + pokemon1 + "\n" + "Vida: " + vidaChar);
-            System.out.println("Nombre: " + pokemon2 + "\n" + "Vida: " + vidaBul);
+            estadoPokemon(pokemon1, vidaChar, pokemon2, vidaBul);
 
             if (turnoPokemon) {
                 System.out.println("\nEs turno de " + pokemon1);
@@ -90,6 +95,8 @@ public class Main {
                     System.out.println("A Bulbasaur le quedan " + mpBul + " puntos de combate");
                 }
             }
+            turnoPokemon = !turnoPokemon;
+
             if (vidaChar == 0) {
                 System.out.println(pokemon1 + " ha quedado fuera de combate");
                 System.out.println(pokemon2 + " GANA!!");
@@ -97,7 +104,6 @@ public class Main {
                 System.out.println(pokemon2 + " ha quedado fuera de combate");
                 System.out.println(pokemon1 + " GANA!!");
             }
-            turnoPokemon = !turnoPokemon;
         }
     }
 }
